@@ -14,24 +14,29 @@ System.out.print("mark is validated");
 
 char grad;
 if(mark>=75){
-grad = 'A';
+grade = 'A';
 }
 else if (mark>=60 && mark<=74){
 grad = 'B';
 }
 else if (mark>=50 && mark<=59){
-grad = 'c';
+grade = 'c';
 }
 else if (mark>=40 && mark<49){
-grad = 'd';
+grade = 'd';
 }
 
 else{
-grad ='F';
+grade ='F';
 }
+ assert (grade == 'A' && mark >= 75) ||
+               (grade == 'B' && mark >= 60 && mark < 75) ||
+               (grade == 'C' && mark >= 50 && mark < 60) ||
+               (grade == 'D' && mark >= 40 && mark < 50) ||
+               (grade == 'F' && mark < 40) : "Incorrect Grade Assigned";
+System.out.print("The grade for the Enterd mark is :" + grade);
 
-System.out.print("The grade for the Enterd mark is :" + grad);
-
+}
 }
 
 }
